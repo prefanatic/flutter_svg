@@ -492,7 +492,7 @@ DrawableStyle parseStyle(
     mask: parseMask(attributes, definitions),
     clipPath: parseClipPath(attributes, definitions),
     textStyle: DrawableTextStyle(
-      fontFamily: getAttribute(attributes, 'font-family'),
+      fontFamily: getAttribute(attributes, 'font-family', def: null),
       fontSize: parseFontSize(
         getAttribute(attributes, 'font-size'),
         parentValue: parentStyle?.textStyle?.fontSize,
